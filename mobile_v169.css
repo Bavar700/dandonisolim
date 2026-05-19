@@ -670,7 +670,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 8px;
     margin-top: auto;
-    align-self: flex-end;
+    align-self: center;
     transition: var(--transition-fast);
 }
 
@@ -706,14 +706,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 36px;
 }
 
 .promo-badge-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .promo-badge {
@@ -742,7 +742,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin: 16px 0;
+    margin: 24px 0;
 }
 
 .old-price {
@@ -767,7 +767,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     color: var(--text-muted);
     line-height: 1.5;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .promo-actions {
@@ -1309,9 +1309,9 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--bg-primary);
     display: flex;
     flex-direction: column;
-    align-items: flex-start !important;
+    align-items: center !important;
     justify-content: center;
-    text-align: left !important;
+    text-align: center !important;
     padding: 24px !important;
     position: relative;
     box-sizing: border-box;
