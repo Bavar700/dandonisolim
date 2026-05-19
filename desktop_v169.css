@@ -146,7 +146,7 @@ h4 {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 12px 0; /* Отрегулировали отступы для нового размера шапки */
+    padding: 6px 0; /* Сделали логотип крупнее за счет меньших отступов */
     box-sizing: border-box;
 }
 
@@ -199,7 +199,7 @@ h4 {
 /* Овальный и современный селектор языков */
 .header-overlay-row .language-selector {
     background: rgba(0, 180, 216, 0.05) !important;
-    border: 1px solid var(--border-color) !important;
+    border: none !important;
     border-radius: 30px !important;
     padding: 3px !important;
     display: flex;
@@ -293,7 +293,7 @@ h4 {
 .language-selector {
     display: flex;
     background: var(--bg-primary);
-    border: 1px solid var(--border-color);
+    border: none;
     padding: 2px;
     border-radius: 6px;
 }
@@ -378,7 +378,7 @@ h4 {
     align-items: center;
     gap: 8px;
     background: var(--cyan-glow);
-    border: 1px solid var(--cyan);
+    border: none;
     color: var(--cyan);
     padding: 8px 16px;
     border-radius: 50px;
@@ -612,7 +612,7 @@ h4 {
     align-items: center;
     gap: 8px;
     background: var(--cyan-glow);
-    border: 1px solid var(--cyan);
+    border: none;
     color: var(--cyan);
     padding: 6px 14px;
     border-radius: 50px;
