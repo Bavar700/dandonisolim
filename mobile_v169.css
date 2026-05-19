@@ -685,15 +685,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 8. Promo Section (Braces Action) */
 .promo-section {
+    padding: 60px 0;
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-color);
 }
 
 .promo-box {
     width: 100%;
-    padding: 24px 16px;
+    padding: 32px 20px;
     border-radius: 20px;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(6, 18, 44, 0.03);
     text-align: center;
@@ -707,21 +708,22 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 8px;
 }
 
 .promo-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: #ffe5ec;
-    border: 1px solid #ffb3c6;
-    color: #ff4d6d;
+    gap: 8px;
+    background: #ef4444;
+    color: #ffffff;
     padding: 6px 14px;
-    border-radius: 30px;
+    border-radius: 4px;
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
+    animation: badgePulse 1.8s infinite ease-in-out;
 }
 
 .promo-title {
@@ -750,49 +752,61 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--cyan);
 }
 
+.offer-blink {
+    color: #10b981 !important;
+    display: inline-block;
+    animation: offerBlink 1.2s infinite ease-in-out;
+}
+
 .promo-desc {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.5;
+    margin-bottom: 8px;
 }
 
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+.promo-actions {
     width: 100%;
-    max-width: 280px;
-    margin: 8px 0;
-}
-
-.countdown-item {
-    flex: 1;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 10px 6px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 12px;
 }
 
-.countdown-value {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--cyan);
-}
-
-.countdown-label {
-    font-size: 8px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 2px;
-}
-
-.promo-cta-btn {
+.promo-actions .primary-btn {
     width: 100%;
-    margin-top: 8px;
+}
+
+.promo-visual {
+    display: none; /* Hide QR code container on mobile */
+}
+
+@keyframes badgePulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.04);
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+@keyframes offerBlink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
 }
 
 /* 9. Booking & Contacts Section */
@@ -1284,55 +1298,91 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 10. Footer */
 .main-footer {
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
     padding: 40px 0 24px 0;
+    background: #f1f5f9;
+    border-top: 1px solid var(--border-color);
 }
 
-.footer-grid {
+.footer-container {
+    padding: 0 16px;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tooth-svg-mini {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-socials a {
+    color: var(--cyan);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: var(--bg-secondary);
+    font-size: 16px;
+    transition: var(--transition-fast);
+}
+
+.footer-socials a:active {
+    background: var(--cyan);
+    color: #ffffff;
+    border-color: var(--cyan);
+}
+
+.footer-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 24px;
+    gap: 12px;
+    padding-top: 24px;
+    font-size: 11px;
+    color: var(--text-muted);
 }
 
-.footer-logo {
-    height: 50px;
-    border-radius: 50%;
-}
-
-.footer-links {
+.developer-info {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    align-items: center;
+    gap: 6px;
 }
 
-.footer-links a {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: var(--transition-fast);
-}
-
-.footer-links a:active {
+.developer-link {
     color: var(--cyan);
-}
-
-.footer-bottom {
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid #f1f5f9;
-    width: 100%;
-    text-align: center;
-}
-
-.footer-bottom p {
-    font-size: 10px;
-    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* Back to Top Button */
