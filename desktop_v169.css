@@ -525,7 +525,7 @@ h4 {
     width: 100%;
     padding: 24px; /* Добавили отступы, чтобы вместить логотип внутрь карточки */
     border-radius: 24px;
-    border: 1px solid var(--border-color);
+    border: none;
     background: var(--bg-secondary);
     transition: var(--transition-smooth);
     box-shadow: 0 10px 30px rgba(6, 18, 44, 0.06);
@@ -698,7 +698,7 @@ h4 {
 
 .service-card {
     background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    border: none;
     border-radius: 8px;
     padding: 40px;
     position: relative;
@@ -1070,7 +1070,7 @@ h4 {
     margin: 0 auto;
     padding: 60px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: none;
     background: var(--bg-secondary);
     position: relative;
     overflow: hidden;
