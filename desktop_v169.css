@@ -412,6 +412,7 @@ h4 {
     font-size: clamp(15px, 1.5vw, 17px);
     max-width: 580px;
     font-weight: 300;
+    margin-top: -24px; /* Поднимаем описание для всех языков одинаково */
 }
 
 .hero-buttons {
@@ -531,7 +532,6 @@ h4 {
 }
 
 .tooth-card:hover {
-    border-color: var(--cyan);
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 180, 216, 0.12);
 }
@@ -710,7 +710,6 @@ h4 {
 }
 
 .service-card:hover {
-    border-color: var(--cyan);
 }
 
 .service-glow {
@@ -1122,7 +1121,6 @@ h4 {
 }
 
 .doctor-card:hover {
-    border-color: var(--cyan);
 }
 
 .doctor-card.active {
