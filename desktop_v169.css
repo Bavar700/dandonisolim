@@ -137,7 +137,7 @@ h4 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-    height: 120px; /* Вернули высоту в 120px */
+    height: 80px; /* Уменьшили высоту шапки почти до размера лого */
 }
 
 /* Навигация в шапке */
@@ -146,7 +146,7 @@ h4 {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 24px 0; /* Увеличили отступы, чтобы логотип стал меньше */
+    padding: 12px 0; /* Отрегулировали отступы для нового размера шапки */
     box-sizing: border-box;
 }
 
@@ -162,7 +162,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 40px; /* Растянули меню по хедеру */
 }
 
 .header-overlay-row .nav-links a {
@@ -201,14 +201,14 @@ h4 {
     background: rgba(0, 180, 216, 0.05) !important;
     border: 1px solid var(--border-color) !important;
     border-radius: 30px !important;
-    padding: 4px !important; /* Чуть увеличили обертку */
+    padding: 3px !important;
     display: flex;
 }
 
 .header-overlay-row .lang-btn {
     color: var(--text-muted) !important;
-    padding: 9px 24px !important; /* Больше наполовину (было 6px 16px) */
-    font-size: 15px !important; /* Больше наполовину (было 11px) */
+    padding: 7px 18px !important; /* Уменьшили (было слишком большим) */
+    font-size: 12px !important;
     font-weight: 700;
     border-radius: 30px !important;
     background: transparent !important;
