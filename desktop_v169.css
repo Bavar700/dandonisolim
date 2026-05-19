@@ -146,7 +146,7 @@ h4 {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 3px 0; /* Даем по 3 пикселя воздуха сверху и снизу */
+    padding: 24px 0; /* Увеличили отступы, чтобы логотип стал меньше */
     box-sizing: border-box;
 }
 
@@ -168,7 +168,7 @@ h4 {
 .header-overlay-row .nav-links a {
     text-decoration: none;
     color: var(--text-muted);
-    font-size: 13px;
+    font-size: 12px; /* Уменьшили с 13px */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -201,14 +201,14 @@ h4 {
     background: rgba(0, 180, 216, 0.05) !important;
     border: 1px solid var(--border-color) !important;
     border-radius: 30px !important;
-    padding: 3px !important;
+    padding: 4px !important; /* Чуть увеличили обертку */
     display: flex;
 }
 
 .header-overlay-row .lang-btn {
     color: var(--text-muted) !important;
-    padding: 6px 16px !important;
-    font-size: 11px !important;
+    padding: 9px 24px !important; /* Больше наполовину (было 6px 16px) */
+    font-size: 15px !important; /* Больше наполовину (было 11px) */
     font-weight: 700;
     border-radius: 30px !important;
     background: transparent !important;
