@@ -399,7 +399,7 @@ h4 {
 }
 
 .hero-title {
-    font-size: clamp(36px, 4.5vw, 68px); /* Значительно увеличили размер шрифта (было 54px) */
+    font-size: clamp(36px, 4vw, 50px); /* Уменьшили до 50px, чтобы таджикская версия поместилась в 2 строки */
     font-family: var(--font-primary);
     font-weight: 400;
     line-height: 1.35; /* Увеличили отступ между строками */
