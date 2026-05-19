@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('dandoni_lang') || 'ru';
     setLanguage(savedLang);
 
+    // Make body visible after init (CSS starts with opacity:0 for smooth load)
+    requestAnimationFrame(() => {
+        document.body.classList.add('page-ready');
+    });
+
 
     // 3. Header Scroll Effect
     const header = document.querySelector('.main-header');
