@@ -1235,10 +1235,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Contacts Info & Map */
+.contacts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 .contact-methods {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 24px;
 }
 
 .contact-card {
