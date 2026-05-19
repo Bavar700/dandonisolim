@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=137">
+    <link rel="stylesheet" href="styles.css?v=138">
 </head>
 
 <body>
@@ -881,7 +881,70 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
     <!-- Script JS -->
+    <!-- Script JS -->
     <script src="script.js"></script>
+
+    <!-- Copy Protection -->
+    <script>
+        (function () {
+            // 1. Block right-click context menu
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // 2. Block keyboard shortcuts
+            document.addEventListener('keydown', function (e) {
+                const blocked = [
+                    // Copy / Select all / Save / View source / Print
+                    (e.ctrlKey || e.metaKey) && ['c', 'a', 's', 'u', 'p'].includes(e.key.toLowerCase()),
+                    // DevTools
+                    (e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase()),
+                    e.key === 'F12',
+                    // PrintScreen
+                    e.key === 'PrintScreen',
+                ];
+                if (blocked.some(Boolean)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            });
+
+            // 3. Block PrintScreen via keyup (clears clipboard)
+            document.addEventListener('keyup', function (e) {
+                if (e.key === 'PrintScreen') {
+                    navigator.clipboard && navigator.clipboard.writeText('');
+                }
+            });
+
+            // 4. Block drag-and-drop of images/text
+            document.addEventListener('dragstart', function (e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // 5. Block text selection via mouse
+            document.addEventListener('selectstart', function (e) {
+                // Allow selection inside input fields
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                e.preventDefault();
+                return false;
+            });
+
+            // 6. Block copy event directly
+            document.addEventListener('copy', function (e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // 7. Block cut event
+            document.addEventListener('cut', function (e) {
+                e.preventDefault();
+                return false;
+            });
+        })();
+    </script>
 </body>
 
 </html>
