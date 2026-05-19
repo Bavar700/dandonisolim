@@ -365,6 +365,7 @@ h4 {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 72px;
+    margin-bottom: 85px; /* Компенсирует высоту блока статистики под логотипом, чтобы кнопки выровнялись ровно по низу логотипа */
 }
 
 .hero-text-group {
