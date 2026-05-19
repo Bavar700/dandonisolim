@@ -212,13 +212,16 @@ h4 {
     font-weight: 700;
     border-radius: 30px !important;
     background: transparent !important;
+    border: 1px solid transparent !important;
     cursor: pointer;
     transition: var(--transition-fast);
 }
 
 .header-overlay-row .lang-btn.active {
-    background: var(--cyan) !important;
+    background: linear-gradient(180deg, #00c2e8 0%, #00a4c5 100%) !important;
     color: #ffffff !important;
+    border: 1px solid #008ea6 !important;
+    box-shadow: 0 3px 6px rgba(0, 180, 216, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Header Logo Row CSS removed */
@@ -299,7 +302,7 @@ h4 {
 }
 
 .lang-btn {
-    border: none;
+    border: 1px solid transparent;
     background: transparent;
     color: var(--text-muted);
     padding: 6px 14px;
@@ -311,8 +314,10 @@ h4 {
 }
 
 .lang-btn.active {
-    background: var(--cyan);
+    background: linear-gradient(180deg, #00c2e8 0%, #00a4c5 100%);
     color: #ffffff;
+    border: 1px solid #008ea6;
+    box-shadow: 0 3px 6px rgba(0, 180, 216, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Glass Panels & Cards Utility (Converted to Crisp Clinical Panels) */
@@ -609,6 +614,33 @@ h4 {
     color: var(--text-muted);
 }
 
+html[lang="ru"] .about-info .section-title span.lang-ru {
+    display: flex !important;
+}
+html[lang="tg"] .about-info .section-title span.lang-tj {
+    display: flex !important;
+}
+html[lang="en"] .about-info .section-title span.lang-en {
+    display: flex !important;
+}
+
+.about-info .section-title span.lang-ru,
+.about-info .section-title span.lang-tj,
+.about-info .section-title span.lang-en {
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-info .section-title .title-left {
+    text-align: left;
+}
+
+.about-info .section-title .title-right {
+    text-align: right;
+}
+
 .section-subtitle {
     display: inline-flex;
     align-items: center;
@@ -901,7 +933,7 @@ h4 {
     height: 280px;
     border-radius: 16px;
     background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
